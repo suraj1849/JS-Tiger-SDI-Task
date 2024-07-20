@@ -1,0 +1,73 @@
+/* Base Styles */
+.page__wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .page__wrapper .column_1 {
+    width: 280px;
+    /* Add a box shadow or border if you want to distinguish the sidebar */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .page__wrapper .column_2 {
+    width: calc(100vw - 280px);
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px 30px;
+    /* You might want to ensure there's no horizontal scroll */
+    box-sizing: border-box;
+  }
+  
+  /* Ensure links reset any default styling */
+  .reset__a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .page__wrapper {
+      flex-direction: column;
+    }
+  
+    .page__wrapper .column_1 {
+      width: 100%;
+      height: 60px; /* or a height that suits your header */
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000; /* Ensure the sidebar is above other content */
+    }
+  
+    .page__wrapper .column_2 {
+      margin-top: 60px; /* Adjust based on the height of your header */
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .page__wrapper .column_1 {
+      height: 50px; /* Reduce height for smaller screens */
+    }
+  
+    .page__wrapper .column_2 {
+      margin-top: 50px; /* Adjust based on the height of your header */
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .page__wrapper .column_1 {
+      height: 40px; /* Even smaller height for very small screens */
+    }
+  
+    .page__wrapper .column_2 {
+      margin-top: 40px; /* Adjust accordingly */
+      padding: 5px;
+    }
+  }
+  

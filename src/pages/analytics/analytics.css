@@ -1,0 +1,334 @@
+.page__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.column_1 {
+  flex: 1;
+}
+
+.column_2 {
+  flex: 4;
+}
+
+@media (max-width: 768px) {
+  .page__wrapper {
+    flex-direction: column;
+  }
+
+  .row_1_analytics, .row_2_analytics, .row_3_analytics, .row_4_analytics, .row_5_analytics, .row_6_analytics {
+    width: 100%;
+    margin-block: 10px;
+  }
+
+  .row_1_analytics, .row_2_analytics {
+    flex-direction: column;
+  }
+
+  .row_1_analytics button, .row_2_analytics button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .row_3_analytics form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .row_5_analytics {
+    grid-template-columns: 1fr;
+  }
+
+  .inner_row_2_analytics {
+    overflow-x: auto;
+  }
+}
+
+.row_1_analytics {
+  margin: auto;
+  width: fit-content;
+  border-radius: 10px;
+  padding: 16px;
+  margin-block: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.row_1_analytics button {
+  padding: 8px;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: gray;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.row_1_analytics button.active {
+  color: #EB5D50;
+  border-bottom: 5px solid #EB5D50;
+}
+
+.row_2_analytics {
+  margin: auto;
+  width: fit-content;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  padding: 16px;
+  margin-block: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 44px;
+  justify-content: center;
+  align-items: center;
+}
+
+.row_2_analytics button {
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.row_2_analytics button:nth-of-type(1) {
+  color: #856562;
+  background-color: #d7c5c3;
+}
+
+.row_2_analytics button:nth-of-type(2) {
+  color: grey;
+  background-color: transparent;
+}
+
+.row_3_analytics {
+  width: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  padding: 16px 24px 16px 24px;
+  margin-block: 20px;
+}
+
+.row_3_analytics form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.row_3_analytics label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-right: 10px;
+}
+
+.row_3_analytics select {
+  padding: 8px 24px;
+  border-radius: 30px;
+  appearance: none;
+  width: 180px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("/assets/icons/arrow_black.png");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 24px) center;
+  color: gray;
+  outline: none;
+}
+
+.row_3_analytics button[type="reset"] {
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 1rem;
+  border: 1px solid #6b120a;
+  background-color: #fff;
+  color: #6b120a;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.row_3_analytics button[type="submit"] {
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 1rem;
+  border: 1px solid #6b120a;
+  background-color: #6b120a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.row_4_analytics {
+  width: 100%;
+  margin-block: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.inner_col_1_analytics {
+  flex: 1;
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 24px;
+  height: auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.inner_col_2_analytics {
+  flex: 1;
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 24px;
+  height: auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.row_5_analytics {
+  width: 100%;
+  margin-block: 20px;
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.row_5_analytics div {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 24px;
+  height: 350px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.row_5_analytics h4 {
+  margin-bottom: 20px;
+}
+
+.dataList {
+  height: calc(100% - 50px);
+  overflow-y: scroll;
+}
+
+.dataList ul {
+  list-style: none;
+}
+
+.dataList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px 10px 0;
+  border-bottom: 1px solid #d7c5c3;
+  font-size: 0.8rem;
+}
+
+.row_6_analytics {
+  width: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  padding: 16px 24px;
+  margin-block: 20px;
+}
+
+.inner_row_1_analytics {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.inner_row_2_analytics {
+  width: 100%;
+  overflow-x: scroll;
+  margin-block: 20px;
+}
+
+.inner_row_2_analytics table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.inner_row_2_analytics th {
+  background-color: rgb(213, 212, 212);
+  padding: 10px;
+  white-space: nowrap;
+  text-align: left;
+  font-weight: 600;
+}
+
+.inner_row_2_analytics td {
+  background-color: white;
+  padding: 10px;
+  border-bottom: 1px solid rgb(213, 212, 212);
+  white-space: nowrap;
+  font-size: 0.9rem;
+  padding-right: 50px;
+}
+
+.data__count {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.data__count select {
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 1px solid #d7c5c3;
+  appearance: none;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .row_1_analytics,
+  .row_2_analytics,
+  .row_3_analytics,
+  .row_4_analytics,
+  .row_5_analytics,
+  .row_6_analytics {
+    width: 100%;
+    margin-block: 10px;
+  }
+
+  .row_1_analytics,
+  .row_2_analytics {
+    flex-direction: column;
+  }
+
+  .row_1_analytics button,
+  .row_2_analytics button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .row_3_analytics form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .row_5_analytics {
+    grid-template-columns: 1fr;
+  }
+
+  .inner_row_2_analytics {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .row_3_analytics select,
+  .data__count select {
+    width: 100%;
+  }
+}
