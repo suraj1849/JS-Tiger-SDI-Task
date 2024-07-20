@@ -6,8 +6,6 @@
 * [Description](#desc)
 * [Tech Stack](#tech)
 * [Run Locally](#install)
-* [Live Link](#live)
-* [Author](#author)
 
 
 ## <a id="desc"></a> Description
@@ -30,13 +28,13 @@ This assessment includes 2 screens:
 Clone the project
 
 ```bash
-  git clone https://github.com/thisisrohitkumar/js_tigers_assignment.git
+  git clone https://github.com/suraj1849/JS-Tiger-SDI-Task.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd js_tigers_assignment
+  cd JS-Tiger-SDI-Task
 ```
 
 Install dependencies
@@ -56,16 +54,3 @@ Start the server
 
 - Analytics Page Route => http://localhost:5173/analytics
 
-
-## <a id="live"></a> Live Demo Link
-
-https://js-tigers-assignment-beta.vercel.app/ - *`(Deployed on Vercel)`*
-
-### <a id="author"></a>Developed By
-
-Rohit Kumar <br/>
-MCA II Year <br/>
-(224CA049) <br/>
-
-Check out my portfolio : <br/>
-https://thisisrohitkumar.github.io/portfolio/
